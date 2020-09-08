@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-07T21:56:46-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nathan Dunkelberger</title><subtitle>I am a PhD student in the MAHI Lab at Rice University designing the next generation of assistive robotics.</subtitle><author><name>Nathan Dunkelberger</name></author><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/07/17/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-07-17T17:05:59-05:00</published><updated>2020-07-17T17:05:59-05:00</updated><id>http://localhost:4000/jekyll/update/2020/07/17/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/07/17/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Nathan Dunkelberger</name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Generalized Dynamics and Simulation</title><link href="http://localhost:4000/blogs/2020/07/07/general_dynamics_1.html" rel="alternate" type="text/html" title="Generalized Dynamics and Simulation" /><published>2020-07-07T00:00:00-05:00</published><updated>2020-07-07T00:00:00-05:00</updated><id>http://localhost:4000/blogs/2020/07/07/general_dynamics_1</id><content type="html" xml:base="http://localhost:4000/blogs/2020/07/07/general_dynamics_1.html">&lt;h1 id=&quot;generalized-dynamics-and-simulation&quot;&gt;Generalized Dynamics and Simulation&lt;/h1&gt;
+&lt;p&gt;The goal of this project for me was to do a deep dive into the dynamics and simulation of robots.
+I have setup several simulations, through both classes and research, but wanted to get a better understanding for the underlying principles.
+To start, I wanted to say that all of the code for this project is available on the github page.&lt;/p&gt;
+
+&lt;p&gt;Here is a test next paragraph.&lt;/p&gt;
+
+&lt;h2 id=&quot;goals&quot;&gt;Goals&lt;/h2&gt;
+&lt;p&gt;The goals of this project were&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Generate and visualize kinematics from dh parameters in realtime&lt;/li&gt;
+  &lt;li&gt;Calculate governing equations of motion of a system from dh parameters&lt;/li&gt;
+  &lt;li&gt;Be able to simulate&lt;/li&gt;
+  &lt;li&gt;Bonus: Be able to do this all in one session&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;project-setup&quot;&gt;Project Setup&lt;/h2&gt;
+&lt;p&gt;I have used all of these tools through either research or through working on robotics stuff in free time, but I would say that all of these tools are very useful for someone getting into robotics. 
+I don’t claim to have an extremely high understanding of any of these tools, as I have basically tought them to myself, so I probably didn’t do everything in the best way, but it works! 
+The tools I used for this project were&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unity
+    &lt;ul&gt;
+      &lt;li&gt;C#&lt;/li&gt;
+      &lt;li&gt;Python experimental package&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Python
+    &lt;ul&gt;
+      &lt;li&gt;sympy&lt;/li&gt;
+      &lt;li&gt;numpy&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;C++
+    &lt;ul&gt;
+      &lt;li&gt;Eigen library&lt;/li&gt;
+      &lt;li&gt;cmake&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In order to understand how this project works, there are some fundamental concepts that need to be understood, and I will assume readers have this understanding.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;kinematics knowledge
+    &lt;ul&gt;
+      &lt;li&gt;matrix math&lt;/li&gt;
+      &lt;li&gt;transforation matrices&lt;/li&gt;
+      &lt;li&gt;forward kinematics principles&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;dynamics knowledge
+    &lt;ul&gt;
+      &lt;li&gt;equations of motion&lt;/li&gt;
+      &lt;li&gt;Newton’s/Lagrange’s methods&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;knowledge of robotics
+    &lt;ul&gt;
+      &lt;li&gt;terminology (end effector, joint, actuator)&lt;/li&gt;
+      &lt;li&gt;dh convention&lt;/li&gt;
+      &lt;li&gt;pd controllers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am very happy with how everything turned out, but there is still a lot of improvements that can be made.
+The general things that I want to improve are&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;add ability to change orientation of base coordinate frame&lt;/li&gt;
+  &lt;li&gt;add support for prismatic joints as well as rotational&lt;/li&gt;
+  &lt;li&gt;add gui for updating params and/or better way to communicate with unity&lt;/li&gt;
+  &lt;li&gt;add general pd controllers for&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Nathan Dunkelberger</name></author><category term="blogs" /><category term="robotics" /><category term="dynamics" /><category term="simulation" /><category term="kinematics" /><summary type="html">Generalized Dynamics and Simulation The goal of this project for me was to do a deep dive into the dynamics and simulation of robots. I have setup several simulations, through both classes and research, but wanted to get a better understanding for the underlying principles. To start, I wanted to say that all of the code for this project is available on the github page.</summary></entry><entry><title type="html">Functional Electrical Stimulation &amp;amp; Exoskeleton Integration</title><link href="http://localhost:4000/research/services/2019/06/01/research-fesexo.html" rel="alternate" type="text/html" title="Functional Electrical Stimulation &amp;amp; Exoskeleton Integration" /><published>2019-06-01T00:00:00-05:00</published><updated>2019-06-01T00:00:00-05:00</updated><id>http://localhost:4000/research/services/2019/06/01/research-fesexo</id><content type="html" xml:base="http://localhost:4000/research/services/2019/06/01/research-fesexo.html">&lt;p&gt;This project focuses on drawing from the strengths of Functional Electrical Stimulation (FES) and Rehabilitation Exoskeletons to eliminate the inherent weaknesses from both. Pilot studies have shown that the combined control method greatly reduces exoskeleton torque requirements compared to exoskeleton control alone, and RMS error compared to FES alone.&lt;/p&gt;</content><author><name>Nathan Dunkelberger</name></author><category term="Services" /><summary type="html">This project focuses on drawing from the strengths of Functional Electrical Stimulation (FES) and Rehabilitation Exoskeletons to eliminate the inherent weaknesses from both. Pilot studies have shown that the combined control method greatly reduces exoskeleton torque requirements compared to exoskeleton control alone, and RMS error compared to FES alone.</summary></entry><entry><title type="html">Language through Haptics</title><link href="http://localhost:4000/research/services/2018/06/01/research-speech.html" rel="alternate" type="text/html" title="Language through Haptics" /><published>2018-06-01T00:00:00-05:00</published><updated>2018-06-01T00:00:00-05:00</updated><id>http://localhost:4000/research/services/2018/06/01/research-speech</id><content type="html" xml:base="http://localhost:4000/research/services/2018/06/01/research-speech.html">&lt;p&gt;Using the MISSIVE, I created a protocol to teach people to understand the English language through haptics in 100 minutes of training. Participants learned 23 phonemes (unique sounds in the English language) and how to build them into words. In a final 50 word test, subjects correctly identified 86% of the words presented to them haptically.&lt;/p&gt;</content><author><name>Nathan Dunkelberger</name></author><category term="Services" /><summary type="html">Using the MISSIVE, I created a protocol to teach people to understand the English language through haptics in 100 minutes of training. Participants learned 23 phonemes (unique sounds in the English language) and how to build them into words. In a final 50 word test, subjects correctly identified 86% of the words presented to them haptically.</summary></entry><entry><title type="html">Multi-sensory Haptics</title><link href="http://localhost:4000/research/services/2017/06/01/research_missive.html" rel="alternate" type="text/html" title="Multi-sensory Haptics" /><published>2017-06-01T00:00:00-05:00</published><updated>2017-06-01T00:00:00-05:00</updated><id>http://localhost:4000/research/services/2017/06/01/research_missive</id><content type="html" xml:base="http://localhost:4000/research/services/2017/06/01/research_missive.html">&lt;p&gt;Work on this project has been developing a Multi-sensory haptic device, the &lt;strong&gt;M&lt;/strong&gt;ulti-sensory &lt;strong&gt;I&lt;/strong&gt;nterface for &lt;strong&gt;S&lt;/strong&gt;queeze, &lt;strong&gt;S&lt;/strong&gt;tretch, and &lt;strong&gt;I&lt;/strong&gt;ntegrated &lt;strong&gt;V&lt;/strong&gt;ibration &lt;strong&gt;E&lt;/strong&gt;lements, or the &lt;strong&gt;MISSIVE&lt;/strong&gt;. Studies have shown that utilizing the multi-sensory nature of the device increases the accuracy when compared to a similar uni-sensory haptic device made from vibrotactors. This has the potential to minimize contact surface area without sacrificing fidelity.&lt;/p&gt;</content><author><name>Nathan Dunkelberger</name></author><category term="Services" /><summary type="html">Work on this project has been developing a Multi-sensory haptic device, the Multi-sensory Interface for Squeeze, Stretch, and Integrated Vibration Elements, or the MISSIVE. Studies have shown that utilizing the multi-sensory nature of the device increases the accuracy when compared to a similar uni-sensory haptic device made from vibrotactors. This has the potential to minimize contact surface area without sacrificing fidelity.</summary></entry></feed>

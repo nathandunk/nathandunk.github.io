@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Research - Nathan Dunkelberger</title>
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+</head>
+<body onload="onStartup()">
+<!-- Sidebar -->
+<nav id="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div style="margin:auto">
+        <img src="/img/headshot_square.jpg" width="200" id="sidebarimg">
+    </div>
+    <div class="sidebar-header">
+        <h4><a href="http://localhost:4000">Nathan Dunkelberger</a></h4>
+    </div>
+
+    <p id="description-text">
+        I am a PhD student in the MAHI Lab at Rice University designing the next generation of assistive robotics.
+    </p>
+
+    <ul class="list-unstyled">
+        
+           
+        <li><a href="/Research/" class="page-list">Research</a></li>
+             
+        <li><a href="/AboutMe/" class="page-list">About Me</a></li>
+             
+        <li><a href="/Blog/" class="page-list">Blog Post</a></li>
+               
+        <li><a href="/" class="page-list">Home</a></li>
+              
+        <li><a href="../files/NathanDunkelbergerCV.pdf" class="page-list" target="_blank"> CV </a></li>
+    </ul>
+
+</nav>
+
+<script>
+    function closeNav() {
+        document.getElementById("sidebar").style.marginLeft = "-280px";
+        document.getElementById("content-with-sidebar").style.marginLeft = "0";
+        document.getElementById("content-with-sidebar").style.marginTop = "36px";
+        var collapse_element = document.getElementById("sidebarCollapse");
+        var background_element = document.getElementById("button-background");
+        collapse_element.classList.remove("d-none");
+        background_element.classList.remove("d-none");
+        console.log("closing");
+    }
+    function openNav() {
+        document.getElementById("sidebar").style.marginLeft = "0px";
+        document.getElementById("content-with-sidebar").style.marginLeft = "280px";
+        document.getElementById("content-with-sidebar").style.marginTop = "0";
+        var collapse_element = document.getElementById("sidebarCollapse");
+        var background_element = document.getElementById("button-background");
+        collapse_element.classList.add("d-none");
+        background_element.classList.add("d-none");
+        console.log("opening");
+    }
+    function onStartup() {
+        const mq = window.matchMedia( "(max-width: 768px)" );
+        if (mq.matches) {
+            console.log("Small");    
+            closeNav();
+        } else {
+            console.log("Large");
+            openNav();
+        }
+    }
+</script>
+ <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        
+        <a class="nav-item nav-link" href="/">Home</a>
+        
+        <a class="nav-item nav-link" href="/about">About</a>
+          
+      </div>
+    </div>
+  </nav> -->
+  <div id="content-with-sidebar">
+    <div id="button-background">
+      <button type="button" onclick="openNav()" class="btn btn-outline-dark d-none" id="sidebarCollapse">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <section id="services">
+<!-- Page Content -->
+
+  
+    
+    <div class="content-section-a">
+    
+
+        <div class="container">
+
+            <div class="row">
+                
+                <div class="col-xl-5 offset-xl-0 col-lg-4 offset-lg-1 px-sm-4">
+                
+                    <div class="row">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">Functional Electrical Stimulation & Exoskeleton Integration</h2>
+                        <div class="lead"><p>This project focuses on drawing from the strengths of Functional Electrical Stimulation (FES) and Rehabilitation Exoskeletons to eliminate the inherent weaknesses from both. Pilot studies have shown that the combined control method greatly reduces exoskeleton torque requirements compared to exoskeleton control alone, and RMS error compared to FES alone.</p>
+</div>
+                    </div> <!-- row -->
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    <u>Papers</u>
+                                </p>
+                                <p>
+                                    <em>Derek Wolf, Nathan Dunkelberger, Craig G. McDonald, Kyra Rudy, Christopher Beck, Marcia K. O’Malley, and Eric Schearer</em>. <a href="../files/WeRob.pdf" target="_blank">Combining Functional Electrical Stimulation and a Powered Exoskeleton to Control Elbow Flexion</a>. WeRob 2017. Houston, TX.
+                                </p>
+                            </div> <!-- card-body -->
+                        </div> <!-- card -->
+                    </div> <!-- row -->
+                </div> <!-- col-lg-5 col-sm-6 OR col-lg-5 offset-lg-2 order-last col-sm-6 -->
+                
+                <div class="col-xl-5 offset-xl-2 col-lg-5 offset-lg-1 my-auto">
+                
+                    <img class="img-fluid" src="/img/research/WeRob.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.content-section-a -->
+
+  
+    
+    <div class="content-section-b">
+    
+
+        <div class="container">
+
+            <div class="row">
+                
+                <div class="col-xl-5 offset-xl-2 col-lg-4 order-lg-last">
+                
+                    <div class="row">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">Language through Haptics</h2>
+                        <div class="lead"><p>Using the MISSIVE, I created a protocol to teach people to understand the English language through haptics in 100 minutes of training. Participants learned 23 phonemes (unique sounds in the English language) and how to build them into words. In a final 50 word test, subjects correctly identified 86% of the words presented to them haptically.</p>
+</div>
+                    </div> <!-- row -->
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    <u>Papers</u>
+                                </p>
+                                <p>
+                                    <em>N. Dunkelberger, Sullivan, J., Bradley, J., Walling, N. P., Manickam, I., Dasarathy, G., Israr, A., Lau, F. W. Y., Klumb, K., Knott, B., Abnousi, F., Baraniuk, R., and O'Malley, M. K.</em>. <a href="../files/ISWC.pdf" target="_blank">Conveying Language Through Haptics, A Multi-sensory Approach</a>. ISWC 2018. Singapore, Singapore.
+                                </p>
+                            </div> <!-- card-body -->
+                        </div> <!-- card -->
+                    </div> <!-- row -->
+                </div> <!-- col-lg-5 col-sm-6 OR col-lg-5 offset-lg-2 order-last col-sm-6 -->
+                
+                <div class="col-xl-5 offset-xl-0 col-lg-5 offset-lg-1 order-lg-first my-auto">
+                
+                    <img class="img-fluid" src="/img/research/Phoneme_mapping_UI_full2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.content-section-a -->
+
+  
+    
+    <div class="content-section-a">
+    
+
+        <div class="container">
+
+            <div class="row">
+                
+                <div class="col-xl-5 offset-xl-0 col-lg-4 offset-lg-1 px-sm-4">
+                
+                    <div class="row">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">Multi-sensory Haptics</h2>
+                        <div class="lead"><p>Work on this project has been developing a Multi-sensory haptic device, the <strong>M</strong>ulti-sensory <strong>I</strong>nterface for <strong>S</strong>queeze, <strong>S</strong>tretch, and <strong>I</strong>ntegrated <strong>V</strong>ibration <strong>E</strong>lements, or the <strong>MISSIVE</strong>. Studies have shown that utilizing the multi-sensory nature of the device increases the accuracy when compared to a similar uni-sensory haptic device made from vibrotactors. This has the potential to minimize contact surface area without sacrificing fidelity.</p>
+</div>
+                    </div> <!-- row -->
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    <u>Papers</u>
+                                </p>
+                                <p>
+                                    <em>Nathan Dunkelberger, Joshua Bradley, Jennifer L. Sullivan, Ali Israr, Frances Lau, Keith Klumb, Freddy Abnousi, and Marcia K. O’Malley</em>. <a href="../files/Eurohaptics.pdf" target="_blank">Improving Perception Accuracy with Multi-sensory Haptic Cue Delivery</a>. Eurohaptics 2018. Pisa, Italy.
+                                </p>
+                            </div> <!-- card-body -->
+                        </div> <!-- card -->
+                    </div> <!-- row -->
+                </div> <!-- col-lg-5 col-sm-6 OR col-lg-5 offset-lg-2 order-last col-sm-6 -->
+                
+                <div class="col-xl-5 offset-xl-2 col-lg-5 offset-lg-1 my-auto">
+                
+                    <img class="img-fluid" src="/img/research/MissiveClear.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.content-section-a -->
+
+</section>
+
+  </div>
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

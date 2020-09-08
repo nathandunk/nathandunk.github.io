@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Generalized Dynamics and Simulation - Nathan Dunkelberger</title>
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+</head>
+<body onload="onStartup()">
+<!-- Sidebar -->
+<nav id="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div style="margin:auto">
+        <img src="/img/headshot_square.jpg" width="200" id="sidebarimg">
+    </div>
+    <div class="sidebar-header">
+        <h4><a href="http://localhost:4000">Nathan Dunkelberger</a></h4>
+    </div>
+
+    <p id="description-text">
+        I am a PhD student in the MAHI Lab at Rice University designing the next generation of assistive robotics.
+    </p>
+
+    <ul class="list-unstyled">
+        
+           
+        <li><a href="/Research/" class="page-list">Research</a></li>
+             
+        <li><a href="/AboutMe/" class="page-list">About Me</a></li>
+             
+        <li><a href="/Blog/" class="page-list">Blog Post</a></li>
+               
+        <li><a href="/" class="page-list">Home</a></li>
+              
+        <li><a href="../files/NathanDunkelbergerCV.pdf" class="page-list" target="_blank"> CV </a></li>
+    </ul>
+
+</nav>
+
+<script>
+    function closeNav() {
+        document.getElementById("sidebar").style.marginLeft = "-280px";
+        document.getElementById("content-with-sidebar").style.marginLeft = "0";
+        document.getElementById("content-with-sidebar").style.marginTop = "36px";
+        var collapse_element = document.getElementById("sidebarCollapse");
+        var background_element = document.getElementById("button-background");
+        collapse_element.classList.remove("d-none");
+        background_element.classList.remove("d-none");
+        console.log("closing");
+    }
+    function openNav() {
+        document.getElementById("sidebar").style.marginLeft = "0px";
+        document.getElementById("content-with-sidebar").style.marginLeft = "280px";
+        document.getElementById("content-with-sidebar").style.marginTop = "0";
+        var collapse_element = document.getElementById("sidebarCollapse");
+        var background_element = document.getElementById("button-background");
+        collapse_element.classList.add("d-none");
+        background_element.classList.add("d-none");
+        console.log("opening");
+    }
+    function onStartup() {
+        const mq = window.matchMedia( "(max-width: 768px)" );
+        if (mq.matches) {
+            console.log("Small");    
+            closeNav();
+        } else {
+            console.log("Large");
+            openNav();
+        }
+    }
+</script>
+ <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        
+        <a class="nav-item nav-link" href="/">Home</a>
+        
+        <a class="nav-item nav-link" href="/about">About</a>
+          
+      </div>
+    </div>
+  </nav> -->
+  <div id="content-with-sidebar">
+    <div id="button-background">
+      <button type="button" onclick="openNav()" class="btn btn-outline-dark d-none" id="sidebarCollapse">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <h1 id="generalized-dynamics-and-simulation">Generalized Dynamics and Simulation</h1>
+<p>The goal of this project for me was to do a deep dive into the dynamics and simulation of robots.
+I have setup several simulations, through both classes and research, but wanted to get a better understanding for the underlying principles.
+To start, I wanted to say that all of the code for this project is available on the github page.</p>
+
+<p>Here is a test next paragraph.</p>
+
+<h2 id="goals">Goals</h2>
+<p>The goals of this project were</p>
+<ul>
+  <li>Generate and visualize kinematics from dh parameters in realtime</li>
+  <li>Calculate governing equations of motion of a system from dh parameters</li>
+  <li>Be able to simulate</li>
+  <li>Bonus: Be able to do this all in one session</li>
+</ul>
+
+<h2 id="project-setup">Project Setup</h2>
+<p>I have used all of these tools through either research or through working on robotics stuff in free time, but I would say that all of these tools are very useful for someone getting into robotics. 
+I don’t claim to have an extremely high understanding of any of these tools, as I have basically tought them to myself, so I probably didn’t do everything in the best way, but it works! 
+The tools I used for this project were</p>
+<ul>
+  <li>Unity
+    <ul>
+      <li>C#</li>
+      <li>Python experimental package</li>
+    </ul>
+  </li>
+  <li>Python
+    <ul>
+      <li>sympy</li>
+      <li>numpy</li>
+    </ul>
+  </li>
+  <li>C++
+    <ul>
+      <li>Eigen library</li>
+      <li>cmake</li>
+    </ul>
+  </li>
+</ul>
+
+<p>In order to understand how this project works, there are some fundamental concepts that need to be understood, and I will assume readers have this understanding.</p>
+<ul>
+  <li>kinematics knowledge
+    <ul>
+      <li>matrix math</li>
+      <li>transforation matrices</li>
+      <li>forward kinematics principles</li>
+    </ul>
+  </li>
+  <li>dynamics knowledge
+    <ul>
+      <li>equations of motion</li>
+      <li>Newton’s/Lagrange’s methods</li>
+    </ul>
+  </li>
+  <li>knowledge of robotics
+    <ul>
+      <li>terminology (end effector, joint, actuator)</li>
+      <li>dh convention</li>
+      <li>pd controllers</li>
+    </ul>
+  </li>
+</ul>
+
+<p>I am very happy with how everything turned out, but there is still a lot of improvements that can be made.
+The general things that I want to improve are</p>
+<ul>
+  <li>add ability to change orientation of base coordinate frame</li>
+  <li>add support for prismatic joints as well as rotational</li>
+  <li>add gui for updating params and/or better way to communicate with unity</li>
+  <li>add general pd controllers for</li>
+</ul>
+
+  </div>
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
