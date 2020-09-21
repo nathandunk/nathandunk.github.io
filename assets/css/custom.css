@@ -83,6 +83,24 @@
     margin-right: auto;
 }
 
+.sidebar-social-btn {
+    width: 80px;
+    height: 30px;
+}
+
+.sidebar-social-img {
+    height: 16px;
+}
+
+.sidebar-social-text {
+    font-size:18px;
+}
+
+#sidebar-social-center {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
 #homeimg {
     border-radius: 50%;
     text-align: center;
@@ -352,6 +370,12 @@ p.copyright {
     font-family: "Tahoma", "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 5em;
     text-shadow: black 1px 1px 3px;
+}
+
+@media (max-width: 768px) {
+    .home-header {
+        font-size: 3.5em;
+    }
 }
 
 .home-body {
