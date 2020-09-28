@@ -34,7 +34,6 @@
                
         <li><a href="/" class="page-list">Home</a></li>
               
-        <li><a href="../files/NathanDunkelbergerCV.pdf" class="page-list" target="_blank"> CV </a></li>
     </ul>
 
     <!-- <ul class="list-unstyled">
@@ -46,8 +45,12 @@
             <a href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/"><img src="/img/icons/linkedin-3-128.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">Linkedin</span></a>
         </li>
 
-        <li class="my-1"><a href="https://github.com/nathandunk"> <img src="/img/icons/GitHub-Mark-Light-32px.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">Github</span></a></li>
-        <!-- <li class="my-1"><a class="btn btn-light btn-sm sidebar-social-btn py-1" role="button" href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/" target="_blank"><img src="/img/icons/LI-Logo.png" class="sidebar-social-img"></a></li> -->
+        <li class="my-1">
+            <a href="https://github.com/nathandunk"> <img src="/img/icons/GitHub-Mark-Light-32px.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">Github</span></a>
+        </li>
+        <li class="my-1">
+            <a href="/files/NathanDunkelbergerCV.pdf"> <img src="/img/icons/document_icon.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">CV</span></a>
+        </li>
     </ul>
     <!-- <div id="sidebar-social-center">
         <a class="btn btn-light btn-sm sidebar-social-btn py-0" role="button" href="https://github.com/nathandunk" target="_blank"><img src="/img/icons/GitHub_Logo.png" class="sidebar-social-img"></a>
@@ -117,24 +120,25 @@
            <div class="col">
               <h1 id="generalized-dynamics-and-simulation">Generalized Dynamics and Simulation</h1>
 <p>The goal of this project for me was to do a deep dive into the dynamics and simulation of robots.
-I have setup several simulations, through both classes and research, but wanted to get a better understanding for the underlying principles.
-To start, I wanted to say that all of the code for this project is available on the github page.</p>
+I have had to setup several simulations, through both classes and research, but wanted to get a better understanding for the underlying principles.
+All of the code for this project is available on the <a href="https://github.com/nathandunk/DHviz2">github page</a>.</p>
 
-<p>Here is a test next paragraph.</p>
+<p><img src="/img/dh_viz_sim.gif" alt="DH simulating gif" /></p>
 
 <h2 id="goals">Goals</h2>
 <p>The goals of this project were</p>
 <ul>
   <li>Generate and visualize kinematics from dh parameters in realtime</li>
-  <li>Calculate governing equations of motion of a system from dh parameters</li>
-  <li>Be able to simulate</li>
+  <li>Automatically calculate governing equations of motion of a system from dh parameters</li>
+  <li>Simulate the developed equations of motion in realtime</li>
   <li>Bonus: Be able to do this all in one session</li>
 </ul>
 
 <h2 id="project-setup">Project Setup</h2>
-<p>I have used all of these tools through either research or through working on robotics stuff in free time, but I would say that all of these tools are very useful for someone getting into robotics. 
-I don’t claim to have an extremely high understanding of any of these tools, as I have basically tought them to myself, so I probably didn’t do everything in the best way, but it works! 
-The tools I used for this project were</p>
+<p>I have accomplished each of these components separately through either research or through working on personal projects in my free time, but I would say that all of these tools are very useful for someone getting into robotics. 
+I am not claiming that any of this was done in the most effective way, but the first goal was to get everything working, and then to improve it from there.</p>
+
+<p>The tools and languages I used for this project were</p>
 <ul>
   <li>Unity
     <ul>
@@ -180,14 +184,15 @@ The tools I used for this project were</p>
   </li>
 </ul>
 
-<p>I am very happy with how everything turned out, but there is still a lot of improvements that can be made.
-The general things that I want to improve are</p>
+<p>I am very happy with how everything turned out, but there are still a lot of improvements that can be made.
+Some general things that I want to improve are</p>
 <ul>
   <li>add ability to change orientation of base coordinate frame</li>
   <li>add support for prismatic joints as well as rotational</li>
   <li>add gui for updating params and/or better way to communicate with unity</li>
-  <li>add general pd controllers for</li>
+  <li>add general pd controllers for controlling robots after sim starts</li>
 </ul>
+
 
             </div>
         </div> 
