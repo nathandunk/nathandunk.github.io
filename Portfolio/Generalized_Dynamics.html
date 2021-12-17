@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Generalized Dynamics and Simulation - Nathan Dunkelberger</title>
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+</head>
+<body onload="onStartup()">
+<!-- Sidebar -->
+<nav id="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div style="margin:auto">
+        <img src="/img/headshot_square.jpg" width="200" id="sidebarimg">
+    </div>
+    <div class="sidebar-header">
+        <h4><a href="/">Nathan Dunkelberger</a></h4>
+    </div>
+
+    <p id="description-text">
+        I am a PhD student in the MAHI Lab at Rice University designing the next generation of assistive robotics.
+    </p>
+
+    <ul class="list-unstyled">
+        
+           
+        <li><a href="/Research/" class="page-list">Research</a></li>
+             
+        <li><a href="/AboutMe/" class="page-list">About Me</a></li>
+             
+        <li><a href="/Blog/" class="page-list">Blog Post</a></li>
+             
+        <li><a href="/Portfolio/" class="page-list">Portfolio</a></li>
+               
+        <li><a href="/" class="page-list">Home</a></li>
+              
+    </ul>
+
+    <!-- <ul class="list-unstyled">
+        <li class="my-1"><a class="btn btn-light btn-sm sidebar-social-btn py-1" role="button" href="https://github.com/nathandunk" target="_blank"><img src="/img/icons/GitHub_Logo.png" class="sidebar-social-img py-auto"></a></li>
+        <li class="my-1"><a class="btn btn-light btn-sm sidebar-social-btn py-1" role="button" href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/" target="_blank"><img src="/img/icons/LI-Logo.png" class="sidebar-social-img"></a></li>
+    </ul> -->
+    <ul class="list-unstyled">
+        <li class="my-1">
+            <a href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/"><img src="/img/icons/linkedin-3-128.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">Linkedin</span></a>
+        </li>
+
+        <li class="my-1">
+            <a href="https://github.com/nathandunk"> <img src="/img/icons/GitHub-Mark-Light-32px.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">Github</span></a>
+        </li>
+        <li class="my-1">
+            <a href="/files/NathanDunkelbergerCV.pdf"> <img src="/img/icons/document_icon.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">CV</span></a>
+        </li>
+    </ul>
+    <!-- <div id="sidebar-social-center">
+        <a class="btn btn-light btn-sm sidebar-social-btn py-0" role="button" href="https://github.com/nathandunk" target="_blank"><img src="/img/icons/GitHub_Logo.png" class="sidebar-social-img"></a>
+        <a class="btn btn-light btn-sm sidebar-social-btn py-0" role="button" href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/" target="_blank"><img src="/img/icons/LI-Logo.png" class="sidebar-social-img"></a>
+    </div> -->
+</nav>
+
+<script>
+    function closeNav() {
+        document.getElementById("sidebar").style.marginLeft = "-280px";
+        document.getElementById("content-with-sidebar").style.marginLeft = "36px";
+        document.getElementById("content-with-sidebar").style.marginRight = "36px";
+        document.getElementById("content-with-sidebar").style.marginTop = "0px";
+        var collapse_element = document.getElementById("sidebarCollapse");
+        var background_element = document.getElementById("button-background");
+        collapse_element.classList.remove("d-none");
+        background_element.classList.remove("d-none");
+        console.log("closing");
+    }
+    function openNav() {
+        document.getElementById("sidebar").style.marginLeft = "0px";
+        document.getElementById("content-with-sidebar").style.marginLeft = "280px";
+        document.getElementById("content-with-sidebar").style.marginRight = "0px";
+        document.getElementById("content-with-sidebar").style.marginTop = "0";
+        var collapse_element = document.getElementById("sidebarCollapse");
+        var background_element = document.getElementById("button-background");
+        collapse_element.classList.add("d-none");
+        background_element.classList.add("d-none");
+        console.log("opening");
+    }
+    function onStartup() {
+        const mq = window.matchMedia( "(max-width: 768px)" );
+        if (mq.matches) {
+            console.log("Small");    
+            closeNav();
+        } else {
+            console.log("Large");
+            openNav();
+        }
+    }
+</script>
+ <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        
+        <a class="nav-item nav-link" href="/">Home</a>
+        
+        <a class="nav-item nav-link" href="/about">About</a>
+          
+      </div>
+    </div>
+  </nav> -->
+  <div id="content-with-sidebar">
+    <!-- <div id="button-background"> -->
+      <button type="button" onclick="openNav()" class="btn btn-outline-dark d-none" id="sidebarCollapse">
+        <i class="fas fa-bars"></i>
+      </button>
+    <!-- </div> -->
+    
+    <section id="project">
+  <div class="container content-section"> 
+      <div class="row"> 
+       <div class="clearfix"></div>
+         <div class="col">
+            </br><p><a href="/Portfolio">Back to Portfolio Home</a></p>
+            <p><strong>Summary</strong> - This builds off of the DH visualization program using Unity, and extends it to find closed-form dynamic equations and can simulate them given valid mass properties, all from a GUI. This can speed up the design process by enabling quick iteration solely based on DH parameters and mass properties to understand what dynamic behaviours can be expected.</p>
+            <h1 id="generalized-dynamics-and-simulation">Generalized Dynamics and Simulation</h1>
+<p>The goal of this project for me was to do a deep dive into the dynamics and simulation of robots.
+I have had to setup several simulations, through both classes and research, but wanted to get a better understanding for the underlying principles.
+All of the code for this project is available on the <a href="https://github.com/nathandunk/DHviz2">github page</a>. 
+You can see the full result of this project in the gif below.</p>
+
+<p><img src="/img/dh_viz_sim.gif" alt="DH simulating gif" /></p>
+
+<h2 id="goals">Goals</h2>
+<p>The goals of this project were</p>
+<ul>
+  <li>Generate and visualize kinematics from dh parameters in realtime</li>
+  <li>Automatically calculate governing equations of motion of a system from dh parameters</li>
+  <li>Simulate the developed equations of motion in realtime</li>
+  <li>Bonus: Be able to do this all in one session</li>
+</ul>
+
+<h1 id="dh-parameter-visualization">DH Parameter Visualization</h1>
+<p>The first part of this project was to provide an interactive interface for someone to explore DH convention in an intuitive way. The interface lets you slide or input DH parameters to understand how the resulting coordinate systems change. I made something similar in matlab when I took my robotics course, and I think this tool would be especially useful to explain how this works in practice. I made the interface using Unity, and the equations that govern the visualization are from Introduction to Robotics Third Edition by John Craig.</p>
+
+<h1 id="automatic-generate-equations-of-motion">Automatic Generate Equations of Motion</h1>
+<p>The second goal of this project was to automatically calculate the equations of motion for the system given the DH parameters. This can be done given explicit equations also found in Introduction to Robitcs by Craig. This was implemented in Python using the Scipy toolkit. The resulting equations were then converted into c++ files that could calculate the EOM of a robot in realtime. To get the properties of the robot, I setup a json file with mass/inertia properties that describe the robot.</p>
+
+<h1 id="simulate-eoms-in-realtime">Simulate EOMs in realtime</h1>
+<p>Once those equations of motion were developed, I used system commands to get cmake to compile the code without leaving the program. Once that was done, I loaded the created dll into the unity simulation, and added open-loop torque controllers at each joint that could again be controlled using sliders to validate that the dynamics were generated correctly.</p>
+
+
+          </div>
+      </div> 
+   </div>
+</section>
+  </div>
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

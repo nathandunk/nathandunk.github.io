@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>MAHI Open Exo Software - Nathan Dunkelberger</title>
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+</head>
+<body onload="onStartup()">
+<!-- Sidebar -->
+<nav id="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div style="margin:auto">
+        <img src="/img/headshot_square.jpg" width="200" id="sidebarimg">
+    </div>
+    <div class="sidebar-header">
+        <h4><a href="/">Nathan Dunkelberger</a></h4>
+    </div>
+
+    <p id="description-text">
+        I am a PhD student in the MAHI Lab at Rice University designing the next generation of assistive robotics.
+    </p>
+
+    <ul class="list-unstyled">
+        
+           
+        <li><a href="/Research/" class="page-list">Research</a></li>
+             
+        <li><a href="/AboutMe/" class="page-list">About Me</a></li>
+             
+        <li><a href="/Blog/" class="page-list">Blog Post</a></li>
+             
+        <li><a href="/Portfolio/" class="page-list">Portfolio</a></li>
+               
+        <li><a href="/" class="page-list">Home</a></li>
+              
+    </ul>
+
+    <!-- <ul class="list-unstyled">
+        <li class="my-1"><a class="btn btn-light btn-sm sidebar-social-btn py-1" role="button" href="https://github.com/nathandunk" target="_blank"><img src="/img/icons/GitHub_Logo.png" class="sidebar-social-img py-auto"></a></li>
+        <li class="my-1"><a class="btn btn-light btn-sm sidebar-social-btn py-1" role="button" href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/" target="_blank"><img src="/img/icons/LI-Logo.png" class="sidebar-social-img"></a></li>
+    </ul> -->
+    <ul class="list-unstyled">
+        <li class="my-1">
+            <a href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/"><img src="/img/icons/linkedin-3-128.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">Linkedin</span></a>
+        </li>
+
+        <li class="my-1">
+            <a href="https://github.com/nathandunk"> <img src="/img/icons/GitHub-Mark-Light-32px.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">Github</span></a>
+        </li>
+        <li class="my-1">
+            <a href="/files/NathanDunkelbergerCV.pdf"> <img src="/img/icons/document_icon.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">CV</span></a>
+        </li>
+    </ul>
+    <!-- <div id="sidebar-social-center">
+        <a class="btn btn-light btn-sm sidebar-social-btn py-0" role="button" href="https://github.com/nathandunk" target="_blank"><img src="/img/icons/GitHub_Logo.png" class="sidebar-social-img"></a>
+        <a class="btn btn-light btn-sm sidebar-social-btn py-0" role="button" href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/" target="_blank"><img src="/img/icons/LI-Logo.png" class="sidebar-social-img"></a>
+    </div> -->
+</nav>
+
+<script>
+    function closeNav() {
+        document.getElementById("sidebar").style.marginLeft = "-280px";
+        document.getElementById("content-with-sidebar").style.marginLeft = "36px";
+        document.getElementById("content-with-sidebar").style.marginRight = "36px";
+        document.getElementById("content-with-sidebar").style.marginTop = "0px";
+        var collapse_element = document.getElementById("sidebarCollapse");
+        var background_element = document.getElementById("button-background");
+        collapse_element.classList.remove("d-none");
+        background_element.classList.remove("d-none");
+        console.log("closing");
+    }
+    function openNav() {
+        document.getElementById("sidebar").style.marginLeft = "0px";
+        document.getElementById("content-with-sidebar").style.marginLeft = "280px";
+        document.getElementById("content-with-sidebar").style.marginRight = "0px";
+        document.getElementById("content-with-sidebar").style.marginTop = "0";
+        var collapse_element = document.getElementById("sidebarCollapse");
+        var background_element = document.getElementById("button-background");
+        collapse_element.classList.add("d-none");
+        background_element.classList.add("d-none");
+        console.log("opening");
+    }
+    function onStartup() {
+        const mq = window.matchMedia( "(max-width: 768px)" );
+        if (mq.matches) {
+            console.log("Small");    
+            closeNav();
+        } else {
+            console.log("Large");
+            openNav();
+        }
+    }
+</script>
+ <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        
+        <a class="nav-item nav-link" href="/">Home</a>
+        
+        <a class="nav-item nav-link" href="/about">About</a>
+          
+      </div>
+    </div>
+  </nav> -->
+  <div id="content-with-sidebar">
+    <!-- <div id="button-background"> -->
+      <button type="button" onclick="openNav()" class="btn btn-outline-dark d-none" id="sidebarCollapse">
+        <i class="fas fa-bars"></i>
+      </button>
+    <!-- </div> -->
+    
+    <section id="project">
+  <div class="container content-section"> 
+      <div class="row"> 
+       <div class="clearfix"></div>
+         <div class="col">
+            </br><p><a href="/Portfolio">Back to Portfolio Home</a></p>
+            <p><strong>Summary</strong> - A C++ library was made to accompany the Mahi Open Exo robot. The library uses the MAHI labs internal libraries, and makes controlling the robot simple and intuitive. The library also enables seamless communication with the Mahi Open Exo simulation, which enables all software intended to run on the physical robot to be tested in a safe environment.</p>
+            <h1 id="mahi-open-exo-software">MAHI Open Exo Software</h1>
+
+<p>The MAHI Open Exo runs based on a <a href="https://github.com/mahilab/moe">c++ library</a> that I have developed based on the MEII software library that was used before. This library is set up to interface with a number of DAQs that we have in our lab. The library also abstracts out all necessary conversions so that the user can provide inputs and read outputs directly in useful units. This includes converting encoder position and velocity readings to radians for all joints, accounting for gear ratios, as well as allowing the user to provide command torques to the robot, accounting for conversions from voltage output, to current output, to motor torque output which is then amplified through a gear ratio. An example of some of the high-level commands are shown below.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">// enables communication with the daq and turns on the motor drivers</span>
+    <span class="n">moe</span><span class="p">.</span><span class="n">enable</span><span class="p">();</span>
+    
+    <span class="c1">// updates the internal model of the robot's state</span>
+    <span class="n">moe</span><span class="p">.</span><span class="n">update</span><span class="p">();</span>
+
+    <span class="c1">// get all joint positions, or just get the position from a single joint</span>
+    <span class="n">moe</span><span class="p">.</span><span class="n">get_joint_positions</span><span class="p">();</span>
+    <span class="n">moe</span><span class="p">.</span><span class="n">get_joint_position</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    
+    <span class="c1">// set all raw joint torques </span>
+    <span class="n">moe</span><span class="p">.</span><span class="n">set_raw_joint_torques</span><span class="p">(</span><span class="n">command_torques</span><span class="p">);</span>
+
+    <span class="c1">// set torques based on tuned PD gains for position control</span>
+    <span class="n">moe</span><span class="p">.</span><span class="n">set_pos_ctrl_torques</span><span class="p">(</span><span class="n">reference</span><span class="p">);</span>
+
+    <span class="c1">// checks the status of all important states to make sure </span>
+    <span class="c1">// that the robot is in a safe configuration</span>
+    <span class="n">moe</span><span class="p">.</span><span class="n">any_limit_exceeded</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>One of the most important features of this library is that it is tightly integrated with the MOE simulation that has been created to work alongside the robot. Through a simple command line flag which can be added to any program, the program will communcate with the MOE simulation instead of attempting to connect to the appropriate DAQ. This is extremely valuable because it lets the user test any program before running it on the actual robot. Not only does this help verify that the program is doing what it was intended to do, but because it includes accurate dynamics of the robot, control algorithms can be tuned using the simulation so that we know they will run effectively the first time on the real robot.</p>
+
+          </div>
+      </div> 
+   </div>
+</section>
+  </div>
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

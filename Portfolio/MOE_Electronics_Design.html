@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>MAHI Open Exo Electronics Design - Nathan Dunkelberger</title>
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+</head>
+<body onload="onStartup()">
+<!-- Sidebar -->
+<nav id="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div style="margin:auto">
+        <img src="/img/headshot_square.jpg" width="200" id="sidebarimg">
+    </div>
+    <div class="sidebar-header">
+        <h4><a href="/">Nathan Dunkelberger</a></h4>
+    </div>
+
+    <p id="description-text">
+        I am a PhD student in the MAHI Lab at Rice University designing the next generation of assistive robotics.
+    </p>
+
+    <ul class="list-unstyled">
+        
+           
+        <li><a href="/Research/" class="page-list">Research</a></li>
+             
+        <li><a href="/AboutMe/" class="page-list">About Me</a></li>
+             
+        <li><a href="/Blog/" class="page-list">Blog Post</a></li>
+             
+        <li><a href="/Portfolio/" class="page-list">Portfolio</a></li>
+               
+        <li><a href="/" class="page-list">Home</a></li>
+              
+    </ul>
+
+    <!-- <ul class="list-unstyled">
+        <li class="my-1"><a class="btn btn-light btn-sm sidebar-social-btn py-1" role="button" href="https://github.com/nathandunk" target="_blank"><img src="/img/icons/GitHub_Logo.png" class="sidebar-social-img py-auto"></a></li>
+        <li class="my-1"><a class="btn btn-light btn-sm sidebar-social-btn py-1" role="button" href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/" target="_blank"><img src="/img/icons/LI-Logo.png" class="sidebar-social-img"></a></li>
+    </ul> -->
+    <ul class="list-unstyled">
+        <li class="my-1">
+            <a href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/"><img src="/img/icons/linkedin-3-128.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">Linkedin</span></a>
+        </li>
+
+        <li class="my-1">
+            <a href="https://github.com/nathandunk"> <img src="/img/icons/GitHub-Mark-Light-32px.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">Github</span></a>
+        </li>
+        <li class="my-1">
+            <a href="/files/NathanDunkelbergerCV.pdf"> <img src="/img/icons/document_icon.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">CV</span></a>
+        </li>
+    </ul>
+    <!-- <div id="sidebar-social-center">
+        <a class="btn btn-light btn-sm sidebar-social-btn py-0" role="button" href="https://github.com/nathandunk" target="_blank"><img src="/img/icons/GitHub_Logo.png" class="sidebar-social-img"></a>
+        <a class="btn btn-light btn-sm sidebar-social-btn py-0" role="button" href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/" target="_blank"><img src="/img/icons/LI-Logo.png" class="sidebar-social-img"></a>
+    </div> -->
+</nav>
+
+<script>
+    function closeNav() {
+        document.getElementById("sidebar").style.marginLeft = "-280px";
+        document.getElementById("content-with-sidebar").style.marginLeft = "36px";
+        document.getElementById("content-with-sidebar").style.marginRight = "36px";
+        document.getElementById("content-with-sidebar").style.marginTop = "0px";
+        var collapse_element = document.getElementById("sidebarCollapse");
+        var background_element = document.getElementById("button-background");
+        collapse_element.classList.remove("d-none");
+        background_element.classList.remove("d-none");
+        console.log("closing");
+    }
+    function openNav() {
+        document.getElementById("sidebar").style.marginLeft = "0px";
+        document.getElementById("content-with-sidebar").style.marginLeft = "280px";
+        document.getElementById("content-with-sidebar").style.marginRight = "0px";
+        document.getElementById("content-with-sidebar").style.marginTop = "0";
+        var collapse_element = document.getElementById("sidebarCollapse");
+        var background_element = document.getElementById("button-background");
+        collapse_element.classList.add("d-none");
+        background_element.classList.add("d-none");
+        console.log("opening");
+    }
+    function onStartup() {
+        const mq = window.matchMedia( "(max-width: 768px)" );
+        if (mq.matches) {
+            console.log("Small");    
+            closeNav();
+        } else {
+            console.log("Large");
+            openNav();
+        }
+    }
+</script>
+ <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        
+        <a class="nav-item nav-link" href="/">Home</a>
+        
+        <a class="nav-item nav-link" href="/about">About</a>
+          
+      </div>
+    </div>
+  </nav> -->
+  <div id="content-with-sidebar">
+    <!-- <div id="button-background"> -->
+      <button type="button" onclick="openNav()" class="btn btn-outline-dark d-none" id="sidebarCollapse">
+        <i class="fas fa-bars"></i>
+      </button>
+    <!-- </div> -->
+    
+    <section id="project">
+  <div class="container content-section"> 
+      <div class="row"> 
+       <div class="clearfix"></div>
+         <div class="col">
+            </br><p><a href="/Portfolio">Back to Portfolio Home</a></p>
+            <p><strong>Summary</strong> - I designed new electronics to accompany the new robot that was being built. Our old robot electronics enclosures were bulky, expensive and difficult to troubleshoot, so the new design cut down costs, increased portability and manufacturability, and improved debugging capabilities.</p>
+            <h1 id="mahi-open-exo-pcb-design">MAHI Open Exo PCB Design</h1>
+<p>In addition to <a href="/Portfolio/MOE_Hardware_Design">designing new hardware</a>, I designed a PCB for the robot to replace the giant and expensive electronics box that powered our previous robot (the MEII). The PCB design was done using Autodesk Fusion 360.</p>
+
+<p><img src="/img/MOE_pcb.jpg" alt="MOE PCB" /></p>
+
+<p>The main brains of the PCB are four Maxon Escon 50/5 motor motor drivers to power the four maxon motors on the Mahi Open Exo. The design has two separate areas on the board, one side that has components that connect to the robot - encoder and motor connections - and the other that has components that connect to the daq -encoder, analog input, digital inputs and outputs.</p>
+
+<p>We are currently designing an enclosure so that the power supply can sit underneath the PCB, and to have a dedicated 120V wall input and switch for the system with emergency stop. There will also be a cooling duct so that there is sufficient airflow for the electronics.</p>
+
+          </div>
+      </div> 
+   </div>
+</section>
+  </div>
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

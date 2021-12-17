@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>MAHI Exo II Dynamics and Simulation - Nathan Dunkelberger</title>
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+</head>
+<body onload="onStartup()">
+<!-- Sidebar -->
+<nav id="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div style="margin:auto">
+        <img src="/img/headshot_square.jpg" width="200" id="sidebarimg">
+    </div>
+    <div class="sidebar-header">
+        <h4><a href="/">Nathan Dunkelberger</a></h4>
+    </div>
+
+    <p id="description-text">
+        I am a PhD student in the MAHI Lab at Rice University designing the next generation of assistive robotics.
+    </p>
+
+    <ul class="list-unstyled">
+        
+           
+        <li><a href="/Research/" class="page-list">Research</a></li>
+             
+        <li><a href="/AboutMe/" class="page-list">About Me</a></li>
+             
+        <li><a href="/Blog/" class="page-list">Blog Post</a></li>
+             
+        <li><a href="/Portfolio/" class="page-list">Portfolio</a></li>
+               
+        <li><a href="/" class="page-list">Home</a></li>
+              
+    </ul>
+
+    <!-- <ul class="list-unstyled">
+        <li class="my-1"><a class="btn btn-light btn-sm sidebar-social-btn py-1" role="button" href="https://github.com/nathandunk" target="_blank"><img src="/img/icons/GitHub_Logo.png" class="sidebar-social-img py-auto"></a></li>
+        <li class="my-1"><a class="btn btn-light btn-sm sidebar-social-btn py-1" role="button" href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/" target="_blank"><img src="/img/icons/LI-Logo.png" class="sidebar-social-img"></a></li>
+    </ul> -->
+    <ul class="list-unstyled">
+        <li class="my-1">
+            <a href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/"><img src="/img/icons/linkedin-3-128.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">Linkedin</span></a>
+        </li>
+
+        <li class="my-1">
+            <a href="https://github.com/nathandunk"> <img src="/img/icons/GitHub-Mark-Light-32px.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">Github</span></a>
+        </li>
+        <li class="my-1">
+            <a href="/files/NathanDunkelbergerCV.pdf"> <img src="/img/icons/document_icon.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">CV</span></a>
+        </li>
+    </ul>
+    <!-- <div id="sidebar-social-center">
+        <a class="btn btn-light btn-sm sidebar-social-btn py-0" role="button" href="https://github.com/nathandunk" target="_blank"><img src="/img/icons/GitHub_Logo.png" class="sidebar-social-img"></a>
+        <a class="btn btn-light btn-sm sidebar-social-btn py-0" role="button" href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/" target="_blank"><img src="/img/icons/LI-Logo.png" class="sidebar-social-img"></a>
+    </div> -->
+</nav>
+
+<script>
+    function closeNav() {
+        document.getElementById("sidebar").style.marginLeft = "-280px";
+        document.getElementById("content-with-sidebar").style.marginLeft = "36px";
+        document.getElementById("content-with-sidebar").style.marginRight = "36px";
+        document.getElementById("content-with-sidebar").style.marginTop = "0px";
+        var collapse_element = document.getElementById("sidebarCollapse");
+        var background_element = document.getElementById("button-background");
+        collapse_element.classList.remove("d-none");
+        background_element.classList.remove("d-none");
+        console.log("closing");
+    }
+    function openNav() {
+        document.getElementById("sidebar").style.marginLeft = "0px";
+        document.getElementById("content-with-sidebar").style.marginLeft = "280px";
+        document.getElementById("content-with-sidebar").style.marginRight = "0px";
+        document.getElementById("content-with-sidebar").style.marginTop = "0";
+        var collapse_element = document.getElementById("sidebarCollapse");
+        var background_element = document.getElementById("button-background");
+        collapse_element.classList.add("d-none");
+        background_element.classList.add("d-none");
+        console.log("opening");
+    }
+    function onStartup() {
+        const mq = window.matchMedia( "(max-width: 768px)" );
+        if (mq.matches) {
+            console.log("Small");    
+            closeNav();
+        } else {
+            console.log("Large");
+            openNav();
+        }
+    }
+</script>
+ <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        
+        <a class="nav-item nav-link" href="/">Home</a>
+        
+        <a class="nav-item nav-link" href="/about">About</a>
+          
+      </div>
+    </div>
+  </nav> -->
+  <div id="content-with-sidebar">
+    <!-- <div id="button-background"> -->
+      <button type="button" onclick="openNav()" class="btn btn-outline-dark d-none" id="sidebarCollapse">
+        <i class="fas fa-bars"></i>
+      </button>
+    <!-- </div> -->
+    
+    <section id="project">
+  <div class="container content-section"> 
+      <div class="row"> 
+       <div class="clearfix"></div>
+         <div class="col">
+            </br><p><a href="/Portfolio">Back to Portfolio Home</a></p>
+            <p><strong>Summary</strong> - This details how I computed the dynamics and created a simulation for a 5-dof parallel robot so that I could test software without needing the physcial robot. This came about due to covid, but has become an integral part of my workflow, allowing me to validate new test protocols and control algorithms without touching the physical robot.</p>
+            <h1 id="mahi-exo-ii-dynamics-and-simulation">Mahi Exo II Dynamics and Simulation</h1>
+<p>In <a href="https://mahilab.rice.edu">my lab</a>, one of the main robots that has been used for experiments is the Mahi Exo II (MEII). This robot is a 5-DOF robot that can actuate the user’s elbow flexion/extension, forearm pronation/supination, wrist flexion/extension, and wrist radial/ulnar deviation, as well as one DOF that is adjustable for the user’s arm length.</p>
+
+<p><img src="/img/MAHI_Exo_II.png" alt="MEII" /></p>
+
+<p>One of the main features of this robot is that it has a parallel mechanism that drives the last 3 DOFs. This provides the benefit of moving the weight back in the robot, but complicates control, because we cannot simply use a PD controller for every anatomical joint to follow a trajectory.</p>
+
+<p>Using the kinematics and the constraints of the parallel mechanism, we can compute the required torque to effectively provide torque to the anatomical DOFs, even though we are providing them to the non-anatomical parallel DOFs. See <a href="/files/MEII_Kinematics.pdf">this document</a> for more information about kinematic modeling. Essentially, there are 14 total DOFs on the robot, 9 of them passive, and 9 constraints, so that we can derive the motion we want on the 5 DOFs that are important to us.</p>
+
+<p>I had been using the robot for research, but when COVID-19 arrived, I was unable to use the robot in person, so I developed a simulation for the MEII so that I could test software at home. The parallel kinematics means that there is no closed-form solution for the dynamics of the MEII. Using <a href="https://ieeexplore.ieee.org/document/973894/figures#figures">this paper</a>, I was able to transform the dynamics of the 14 individual DOFs to the 5 DOFs that were important for me.</p>
+
+<p>With the solution, I created a simulation using the Unity game engine. I was able to export the solidworks files as .objs, import them into Unity, and set them to move given variables. Separately, I set up a c++ program that would calculate the accelerations of each of the joints, and integrate through time at a 1kHz loop rate. This was loaded as a dll into Unity and the resulting movements were visualized as mentioned. All code that was used to do this is available <a href="https://github.com/mahilab/MEIISim">here</a>, with dynamics calculated in matlab, EOMs converted to a usable format using python, c++ code to run the simulation, and unity environment to communicate with simulation and visualize results.</p>
+
+<p><img src="/img/meii_sim_rom_demo.gif" alt="Mahi Exo II Sim Demo" /></p>
+
+<p>In my <a href="https://github.com/mahilab/MEII">repository</a> that is used to run the MEII, I added a flag that I could input to any program that would reroute all daq commands (reading position/velocity and writing torque) to the simulation instead of the daq. Now, I can run anything that I can run on the real robot, in my own simulation!</p>
+
+          </div>
+      </div> 
+   </div>
+</section>
+  </div>
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

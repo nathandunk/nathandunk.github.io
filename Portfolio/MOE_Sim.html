@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>MAHI Open Exo Simulation - Nathan Dunkelberger</title>
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+</head>
+<body onload="onStartup()">
+<!-- Sidebar -->
+<nav id="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div style="margin:auto">
+        <img src="/img/headshot_square.jpg" width="200" id="sidebarimg">
+    </div>
+    <div class="sidebar-header">
+        <h4><a href="/">Nathan Dunkelberger</a></h4>
+    </div>
+
+    <p id="description-text">
+        I am a PhD student in the MAHI Lab at Rice University designing the next generation of assistive robotics.
+    </p>
+
+    <ul class="list-unstyled">
+        
+           
+        <li><a href="/Research/" class="page-list">Research</a></li>
+             
+        <li><a href="/AboutMe/" class="page-list">About Me</a></li>
+             
+        <li><a href="/Blog/" class="page-list">Blog Post</a></li>
+             
+        <li><a href="/Portfolio/" class="page-list">Portfolio</a></li>
+               
+        <li><a href="/" class="page-list">Home</a></li>
+              
+    </ul>
+
+    <!-- <ul class="list-unstyled">
+        <li class="my-1"><a class="btn btn-light btn-sm sidebar-social-btn py-1" role="button" href="https://github.com/nathandunk" target="_blank"><img src="/img/icons/GitHub_Logo.png" class="sidebar-social-img py-auto"></a></li>
+        <li class="my-1"><a class="btn btn-light btn-sm sidebar-social-btn py-1" role="button" href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/" target="_blank"><img src="/img/icons/LI-Logo.png" class="sidebar-social-img"></a></li>
+    </ul> -->
+    <ul class="list-unstyled">
+        <li class="my-1">
+            <a href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/"><img src="/img/icons/linkedin-3-128.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">Linkedin</span></a>
+        </li>
+
+        <li class="my-1">
+            <a href="https://github.com/nathandunk"> <img src="/img/icons/GitHub-Mark-Light-32px.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">Github</span></a>
+        </li>
+        <li class="my-1">
+            <a href="/files/NathanDunkelbergerCV.pdf"> <img src="/img/icons/document_icon.png" style="vertical-align:middle;" height=18px> <span style="vertical-align:middle;">CV</span></a>
+        </li>
+    </ul>
+    <!-- <div id="sidebar-social-center">
+        <a class="btn btn-light btn-sm sidebar-social-btn py-0" role="button" href="https://github.com/nathandunk" target="_blank"><img src="/img/icons/GitHub_Logo.png" class="sidebar-social-img"></a>
+        <a class="btn btn-light btn-sm sidebar-social-btn py-0" role="button" href="https://www.linkedin.com/in/nathan-dunkelberger-b5a00382/" target="_blank"><img src="/img/icons/LI-Logo.png" class="sidebar-social-img"></a>
+    </div> -->
+</nav>
+
+<script>
+    function closeNav() {
+        document.getElementById("sidebar").style.marginLeft = "-280px";
+        document.getElementById("content-with-sidebar").style.marginLeft = "36px";
+        document.getElementById("content-with-sidebar").style.marginRight = "36px";
+        document.getElementById("content-with-sidebar").style.marginTop = "0px";
+        var collapse_element = document.getElementById("sidebarCollapse");
+        var background_element = document.getElementById("button-background");
+        collapse_element.classList.remove("d-none");
+        background_element.classList.remove("d-none");
+        console.log("closing");
+    }
+    function openNav() {
+        document.getElementById("sidebar").style.marginLeft = "0px";
+        document.getElementById("content-with-sidebar").style.marginLeft = "280px";
+        document.getElementById("content-with-sidebar").style.marginRight = "0px";
+        document.getElementById("content-with-sidebar").style.marginTop = "0";
+        var collapse_element = document.getElementById("sidebarCollapse");
+        var background_element = document.getElementById("button-background");
+        collapse_element.classList.add("d-none");
+        background_element.classList.add("d-none");
+        console.log("opening");
+    }
+    function onStartup() {
+        const mq = window.matchMedia( "(max-width: 768px)" );
+        if (mq.matches) {
+            console.log("Small");    
+            closeNav();
+        } else {
+            console.log("Large");
+            openNav();
+        }
+    }
+</script>
+ <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        
+        <a class="nav-item nav-link" href="/">Home</a>
+        
+        <a class="nav-item nav-link" href="/about">About</a>
+          
+      </div>
+    </div>
+  </nav> -->
+  <div id="content-with-sidebar">
+    <!-- <div id="button-background"> -->
+      <button type="button" onclick="openNav()" class="btn btn-outline-dark d-none" id="sidebarCollapse">
+        <i class="fas fa-bars"></i>
+      </button>
+    <!-- </div> -->
+    
+    <section id="project">
+  <div class="container content-section"> 
+      <div class="row"> 
+       <div class="clearfix"></div>
+         <div class="col">
+            </br><p><a href="/Portfolio">Back to Portfolio Home</a></p>
+            <p><strong>Summary</strong> - I created a simulation of the new robot that we were designing in my lab. The simulation of the 4 DOF serial robot enabled me to test, and even tune parameters for novel control algorithms without needing the physical robot and</p>
+            <h1 id="mahi-open-exo-simulation">MAHI Open Exo Simulation</h1>
+<p>As my coworker and I were designing the MAHI Open Exo (MOE), we were simultaneously developing the software to control it. As we were still waiting on parts to be machined, and electronics to be finished, I wanted a way to make sure that our software was ready to use. As I had already developed a simulation for one of our previous robots, the MEII, I decided to make a simulation for our robot so that we could test our software (all code can be found <a href="https://github.com/mahilab/MOE_sim">here</a>).</p>
+
+<p><img src="/img/moe_sim_rom_demo.gif" alt="Mahi Open Exo Sim Demo" /></p>
+
+<p>After developing a simulation for the MEII, a 5 DOF parallel robot, developing a simulation for MOE, a 4 DOF serial robot was a significantly easier task. With this being a fully serial robot, dynamics could be explicitly found through iterative Newton-Euler equations. With this solution, all that was needed was to find mass properties for each of the successive joints on the robot.</p>
+
+<p>In the past, mass properties have been generated by selecting all relevant parts in Solidworks, and manually copying down mass properties to a c++ file to pull from. When design work has been completed, this is a valid option, but we were still in the process of iterating our designs. Because of this, I wrote a C# script using the Solidworks API to automatically generate the mass properties for each joint to a json format. Similar to the MEII simulation, I used a python script to generate c++ compatible files which could be compiled to run the simulation.</p>
+
+          </div>
+      </div> 
+   </div>
+</section>
+  </div>
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
